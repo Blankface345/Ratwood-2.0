@@ -38,21 +38,21 @@
 
 /mob/living/toggle_move_intent()
 	. = ..()
-	update_move_intent_slowdown()
+	update_move_intent_slowdown(100)
 
 /mob/living/toggle_rogmove_intent()
 	. = ..()
-	update_move_intent_slowdown()
+	update_move_intent_slowdown(100)
 /*
 /mob/living/update_sneak_invis()
 	if(m_intent = MOVE_INTENT_SNEAK)
 */
 /mob/living/def_intent_change()
 	. = ..()
-	update_move_intent_slowdown()
+	update_move_intent_slowdown(100)
 
 /mob/living/update_config_movespeed()
-	update_move_intent_slowdown()
+	update_move_intent_slowdown(100)
 	return ..()
 
 /mob/living/proc/update_move_intent_slowdown()
