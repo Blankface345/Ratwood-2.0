@@ -60,8 +60,10 @@
 	switch(m_intent)
 		if(MOVE_INTENT_WALK)
 			mod = CONFIG_GET(number/movedelay/walk_delay)
+	        mod = 3
 		if(MOVE_INTENT_RUN)
 			mod = CONFIG_GET(number/movedelay/run_delay)
+		    mod = 2
 		if(MOVE_INTENT_SNEAK)
 			if(HAS_TRAIT(src, TRAIT_LIGHT_STEP))
 				mod = CONFIG_GET(number/movedelay/walk_delay) * 1.3
